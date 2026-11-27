@@ -359,7 +359,7 @@ class MainActivity : Activity() {
         barTitle.text = s.title
         barArtist.text = s.artist
         val art = getArt(s.id)
-        if (art != null) barArt.setImageBitmap(art) else barArt.setImageResource(R.drawable.ic_launcher)
+        if (art != null) barArt.setImageBitmap(art) else barArt.setImageResource(R.drawable.icon)
         playBtn.setImageResource(
             if (svc?.isPlaying == true) android.R.drawable.ic_media_pause else android.R.drawable.ic_media_play
         )
@@ -382,7 +382,7 @@ class MainActivity : Activity() {
                 layoutParams = LinearLayout.LayoutParams(dp(52), dp(52))
             }
             val bmp = r.song?.let { getArt(it.id) }
-            if (bmp != null) img.setImageBitmap(bmp) else img.setImageResource(R.drawable.ic_launcher)
+            if (bmp != null) img.setImageBitmap(bmp) else img.setImageResource(R.drawable.icon)
             row.addView(img)
             val tc = LinearLayout(this@MainActivity).apply {
                 orientation = LinearLayout.VERTICAL
